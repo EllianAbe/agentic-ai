@@ -13,7 +13,7 @@ db = SQLDatabase(engine)
 
 def get_sql_agent(api_key: str):
     """Creates an LLM-powered SQL Agent using the user's OpenAI API key."""
-    llm = ChatOpenAI(model_name="gpt-4o",
+    llm = ChatOpenAI(model_name="gpt-4o-mini",
                      temperature=0, openai_api_key=api_key)
     return create_sql_agent(
         llm=llm,
